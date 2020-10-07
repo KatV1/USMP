@@ -1,0 +1,35 @@
+@model calculadoramvc.Models.Contacto
+
+@{
+    ViewData["Title"] = "Contacto Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Contacto</h1>
+    <form asp-controller="Contacto" asp-action="EnviarMensaje">
+        <div>
+            <label for="Nombre">Nombre</label>
+            <input asp-for="Nombre" type="text"/>
+        </div>
+        <div>
+            <label for="Apellido">Apellido</label>
+            <input asp-for="Apellido" type="text"/>
+        </div>
+        <div>
+            <label for="Email">Email</label>
+            <input asp-for="Email" type="email"/>
+        </div>
+        <div>
+            <label for="Telefono">Teléfono</label>
+            <input asp-for="Telefono" type="number"/>
+        </div>
+        <div>
+            <label for="Asunto">Asunto</label>
+            <input asp-for="Asunto" type="text"/>
+        </div>
+        <div>
+            <label for="Mensaje">Mensaje</label>
+            <input asp-for="Mensaje" type="text"/>
+        </div>
+    </form>
+</div>

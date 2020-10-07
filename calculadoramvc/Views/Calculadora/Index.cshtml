@@ -9,20 +9,20 @@
     <h1 class="display-4">Calculadora</h1>
     <form asp-controller="Calculadora" asp-action="Calcular">
             
-            <label>Operador1</label>
+            <label>Primer número</label>
             <input asp-for="Operador1"/>
             <br/>
 
-            <label>Operador2</label>
+            <label>Segundo número</label>
             <input asp-for="Operador2"/>
             <br/>
 
-            <label>Operando</label>
+            <label>Quiero...</label>
             <select asp-for="Acccion">
-                <option value="+">Suma</option>
-                <option value="-">Resta</option>
-                <option value="*">Multiplicacion</option>
-                <option value="/">Division</option>
+                <option value="+">Sumar</option>
+                <option value="-">Restar</option>
+                <option value="*">Multiplicar</option>
+                <option value="/">Dividir</option>
             </select>
             <br/>
             
