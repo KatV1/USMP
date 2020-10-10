@@ -9,7 +9,7 @@ namespace calculadoramvc.Models
         public int Operador1 { get; set; }
         public int Operador2 { get; set; }
 
-        public string Acccion { get; set; }
+        public string Accion { get; set; }
 
         [Display(Name="Sale: ")]
         public float Respuesta { get; set; }

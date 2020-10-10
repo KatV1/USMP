@@ -16,12 +16,12 @@
             <input asp-for="Apellido" type="text"/>
         </div>
         <div>
-            <label for="Email">Email</label>
+            <label for="Email">Email</label>  
             <input asp-for="Email" type="email"/>
         </div>
         <div>
             <label for="Telefono">Teléfono</label>
-            <input asp-for="Telefono" type="number"/>
+            <input asp-for="Telefono" type="tel" name="telefono" pattern="[0-9]{9}" />
         </div>
         <div>
             <label for="Asunto">Asunto</label>
@@ -29,7 +29,11 @@
         </div>
         <div>
             <label for="Mensaje">Mensaje</label>
-            <input asp-for="Mensaje" type="text"/>
+            <textarea asp-for="Mensaje" rows="4" cols="50">
+            </textarea>
+        </div>
+        <div>
+            <input type="submit" value="Enviar"/>
         </div>
     </form>
 </div>
