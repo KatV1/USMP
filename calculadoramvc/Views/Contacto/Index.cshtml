@@ -6,10 +6,12 @@
 
 <div class="text-center">
     <h1 class="display-4">Contacto</h1>
+    
+
     <form asp-controller="Contacto" asp-action="EnviarMensaje">
         <div>
             <label for="Nombre">Nombre</label>
-            <input asp-for="Nombre" type="text"/>
+            <input asp-for="Nombre" type="text" required/>
         </div>
         <div>
             <label for="Apellido">Apellido</label>
@@ -17,7 +19,7 @@
         </div>
         <div>
             <label for="Email">Email</label>  
-            <input asp-for="Email" type="email"/>
+            <input asp-for="Email" type="email" required/>
         </div>
         <div>
             <label for="Telefono">Teléfono</label>
@@ -36,4 +38,6 @@
             <input type="submit" value="Enviar"/>
         </div>
     </form>
+
+    <td>@Html.DisplayTextFor(model => model.Respuesta)</td>
 </div>

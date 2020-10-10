@@ -22,16 +22,15 @@ namespace calculadoramvc.Controllers
         {
             return View();
         }
-
-        public IActionResult Privacy()
+        [HttpPost]
+        public IActionResult EnviarMensaje (Contacto contacto)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                contacto.Respuesta="Gracias " + contacto.Nombre + ", estamos en contacto.";
+            }         
+            return View("index", contacto);
         }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        
     }
 }
