@@ -27,7 +27,7 @@ namespace calculadoramvc.Controllers
         {
             if (ModelState.IsValid)
             {
-                contacto.Respuesta="Gracias " + contacto.Nombre + ", estamos en contacto.";
+                contacto.Respuesta="Gracias " + contacto.Nombre + ", lo contactaremos lo más pronto posible.";
             }         
             return View("index", contacto);
         }
