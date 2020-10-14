@@ -18,13 +18,16 @@ namespace calculadoramvc.Models
         [Display(Name="Email")]
         public string Email { get; set; }
         
-        //[DataType(DataType.PhoneNumber)]
+        [Required(ErrorMessage = "Debe ingresar un número de teléfono")]
+        [RegularExpression(@"[0-9]{9}", ErrorMessage = "No es un número de teléfono válido")]
+        // [DataType(DataType.PhoneNumber)]
         [Display(Name="Teléfono")]
         public int Telefono { get; set; }
 
         [Display(Name="Asunto")]
         public string Asunto { get; set; }
 
+        [Required(ErrorMessage = "Por favor, ingrese un mensaje")]
         [Display(Name="Mensaje")]
         public string Mensaje { get; set; }
         public string Respuesta { get; set; }
