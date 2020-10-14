@@ -15,6 +15,7 @@ namespace calculadoramvc.Models
         public string Apellido { get; set; }
 
         [Required(ErrorMessage = "Por favor, ingrese un e-mail para contactarlo")]
+        [RegularExpression(@"^[^@\s]+@[^@\s]+\.[^@\s]+$", ErrorMessage = "No es un e-mail válido")]
         [Display(Name="Email")]
         public string Email { get; set; }
         
